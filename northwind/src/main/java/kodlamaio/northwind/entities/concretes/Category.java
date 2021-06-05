@@ -21,6 +21,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler", "products" })
 public class Category {
+
 	@Id
 	@Column(name = "category_id")
 	private int categoryId;
@@ -30,4 +31,5 @@ public class Category {
 
 	@OneToMany(mappedBy = "category")
 	private List<Product> products;
+	
 }
